@@ -128,7 +128,7 @@ elasticSearch:
     date:
         formats: ["yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
     client.hosts:
-        - {host: localhost, port: 9200}
+        - {host: localhost, port: 9300}
     defaultExcludedProperties: ['password']
     disableAutoIndex: false
     index:
@@ -146,9 +146,6 @@ environments:
             bulkIndexOnStartup: true
             datastoreImpl: hibernateDatastore
     test:
-        dataSource:
-            dbCreate: update
-            url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
         elasticSearch:
             client:
                 mode: local
