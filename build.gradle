@@ -40,6 +40,8 @@ dependencyManagement {
     applyMavenExclusions false
 }
 
+ext['elasticsearch.version'] = "2.3.5"
+
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
